@@ -1,0 +1,191 @@
+/* styles.css */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    height: 80px;
+    background: #D9C8FF; /* Pale purple */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #000;
+    padding: 0 1.5rem;
+}
+
+.nav-items a:hover {
+    color: #fff;
+}
+
+.hero {
+    background: #D9C8FF; /* Pale purple */
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 85vh; /* Reduced height */
+    padding: 3rem 2rem;
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #000;
+    padding: 0 2rem;
+}
+
+.column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.column-left p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.cta-button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: #D9C8FF; /* Pale purple */
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    align-self: flex-start; /* Ensures button aligns to the left by default */
+    margin-top: 20px; /* Adds space between button and content */
+}
+
+.cta-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.column-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.hero-image {
+    width: 60%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 40px);
+    margin: 20px;
+    text-align: center;
+}
+
+.gallery-img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+h2, h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.small-text {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #555;
+    text-align: left;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.contact-info strong {
+    display: inline-block;
+    width: 100px;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #D9C8FF; /* Pale purple */
+    color: #000;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        height: auto; /* Ensure it adjusts well on smaller screens */
+        text-align: center; /* Centers the text for smaller screens */
+    }
+
+    .column-left, .column-right {
+        align-items: center;
+    }
+
+    .column-left {
+        margin-bottom: 20px; /* Adds space between the left column and the right column (image) */
+    }
+
+    .cta-button {
+        align-self: center; /* Centers the button on smaller screens */
+        margin-top: 20px; /* Adds space between button and content */
+    }
+
+    .gallery-item {
+        flex: 1 1 100%;
+    }
+
+    .hero-image {
+        width: 80%;
+    }
+}
