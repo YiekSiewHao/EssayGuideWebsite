@@ -1,17 +1,25 @@
-/* styles.css */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-y: scroll; 
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+}
+
+body::-webkit-scrollbar {
+    display: none; 
 }
 
 nav {
     height: 80px;
-    background: #D9C8FF; /* Pale purple */
+    background: #D9C8FF; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 20px 2rem; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-bottom: 2px solid #A57CFF; 
 }
 
 .logo {
@@ -19,6 +27,11 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     font-style: italic;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-items a {
@@ -32,7 +45,7 @@ nav {
 }
 
 .hero {
-    background: #D9C8FF; /* Pale purple */
+    background: #D9C8FF; 
 }
 
 .hero-container {
@@ -162,6 +175,28 @@ h3 {
 }
 
 @media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-items a {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .nav-items a:last-child {
+        border-bottom: none;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         height: auto; /* Ensure it adjusts well on smaller screens */
